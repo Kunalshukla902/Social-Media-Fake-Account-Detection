@@ -10,8 +10,8 @@ import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
 
-train_filepath = "C:/Users/kshuk/3D Objects/major project/major code/main folder/project code/insta_train.csv"
-test_filepath = "C:/Users/kshuk/3D Objects/major project/major code/main folder/project code/insta_test.csv"
+train_filepath = "datasets/insta_train.csv"
+test_filepath = "datasets/insta_test.csv"
 insta_train = pd.read_csv(train_filepath)
 insta_test = pd.read_csv(test_filepath)
 
@@ -113,14 +113,14 @@ print('XGB Accuracy:',accuracy_score(xgb_predict,test_Y))
 import joblib
 
 # Define the filename for saving the trained model
-model_filename = 'Random_forest_model.pkl'
+model_filename = 'model_weights/Random_forest_model.pkl'
 
 # Save the trained model to the specified filename using joblib
 joblib.dump(model3, model_filename)
 
 print("Model saved successfully at:", model_filename)
 
-df_test = pd.read_csv('C:/Users/kshuk/3D Objects/major project/major code/main folder/project code/insta_test.csv')
+df_test = pd.read_csv('datasets/insta_test.csv')
 
 df_test.head()
 
@@ -144,7 +144,7 @@ import joblib
 import pandas as pd
 
 # Load the trained model from file
-model_filename = 'C:/Users/kshuk/3D Objects/major project/major code/main folder/project code/Random_forest_model.pkl'
+model_filename = 'model_weights/Random_forest_model.pkl'
 loaded_model = joblib.load(model_filename)
 
 # Define the input features based on user_data keys

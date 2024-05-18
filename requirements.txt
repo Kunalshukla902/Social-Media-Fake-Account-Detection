@@ -1,0 +1,11 @@
+pandas
+matplotlib
+numpy
+seaborn
+tensorflow
+scikit-learn
+joblib
+xgboost
+streamlit
+streamlit_option_menu
+pillow

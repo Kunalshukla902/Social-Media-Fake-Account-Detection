@@ -23,18 +23,18 @@ def app():
     st.write("Test Dataset Details:")
     st.write("- Number of rows: 120", " And Number of columns: 12")
     #st.write("- Number of columns: 12")
-    train_image = Image.open('train_data_info.png')
+    train_image = Image.open('plots/train_data_info.png')
     st.image(train_image, caption='Train Dataset', use_column_width=True)
-    test_image = Image.open('test_data_info.png')
+    test_image = Image.open('plots/test_data_info.png')
     st.image(test_image, caption='Test Dataset', use_column_width=True)
-    dataset_image = Image.open('Dataset_info.png')
+    dataset_image = Image.open('plots/Dataset_info.png')
     st.image(dataset_image, caption='Dataset Details', use_column_width=True)
 
     # 2. Data Visualizations (JPEG/PNG format)
     st.header("2. Data Visualizations")
-    visualization_image = Image.open('v_heatmap.png')
+    visualization_image = Image.open('plots/v_heatmap.png')
     st.image(visualization_image, caption='Correlation plot- Heatmap', use_column_width=True)
-    visualization_image2 = Image.open('v_realVsfake_histogram.png')
+    visualization_image2 = Image.open('plots/v_realVsfake_histogram.png')
     st.image(visualization_image2, caption='followers with bins and show fake value counts', use_column_width=True)
     
     
@@ -89,14 +89,14 @@ def app():
 
 
     # Display Decision Tree model details, accuracy, and plots (if available)
-    dt_details_image = Image.open('decision tree.png')
+    dt_details_image = Image.open('plots/decision tree.png')
     st.image(dt_details_image, caption='Decision Tree Details', use_column_width=True)
 
     # 4. Screenshots of Code Snippets
     st.header("4. Screenshots of Code Snippets")
-    code_snippet_image = Image.open('ANN_code.png')
+    code_snippet_image = Image.open('plots/ANN_code.png')
     st.image(code_snippet_image, caption='Code Snippet Of ANN', use_column_width=True)
-    code_snippet_image2 = Image.open('Decision_tree_code.png')
+    code_snippet_image2 = Image.open('plots/Decision_tree_code.png')
     st.image(code_snippet_image2, caption='Code Snippet of Decision Tree', use_column_width=True)
 
 if __name__ == "__main__":

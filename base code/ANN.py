@@ -23,11 +23,11 @@ from sklearn.preprocessing import LabelEncoder
 from sklearn.metrics import classification_report,accuracy_score,roc_curve,confusion_matrix
 
 # Load the training dataset
-instagram_df_train=pd.read_csv('insta_train.csv')
+instagram_df_train=pd.read_csv('datasets/insta_train.csv')
 instagram_df_train
 
 # Load the testing data
-instagram_df_test=pd.read_csv('insta_test.csv')
+instagram_df_test=pd.read_csv('datasets/insta_test.csv')
 instagram_df_test
 
 instagram_df_train.head()
@@ -159,7 +159,7 @@ history = model.fit(X_train, y_train, epochs = epochs,  verbose = 1, validation_
 
 
 # Save the model after training
-model.save('modelANN.h5')  # Replace 'your_model.h5' with your desired filename
+model.save('model_weights/modelANN.h5')  # Replace 'your_model.h5' with your desired filename
 
 
 
@@ -222,7 +222,7 @@ import numpy as np
 from tensorflow.keras.models import load_model
 
 # Load the pre-trained model (replace with your saved model filename)
-model = load_model('modelANN.h5')
+model = load_model('model_weights/modelmodelANN.h5')
 
 # Function to get user input
 def get_user_input():

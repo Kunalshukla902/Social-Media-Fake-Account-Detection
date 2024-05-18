@@ -12,11 +12,11 @@ from tensorflow.keras.models import load_model
 from sklearn.preprocessing import StandardScaler
 
 # Load the pre-trained model
-model = load_model('modelANN.h5')
+model = load_model('model_weights/modelANN.h5')
 scaler_x = StandardScaler()  # Define scaler object
 
 # Load the scaler that was used during training
-scaler_x.fit(pd.read_csv('insta_train.csv').drop(columns=['fake']))
+scaler_x.fit(pd.read_csv('datasets/insta_train.csv').drop(columns=['fake']))
 
 # Function to preprocess input data
 def preprocess_input(df):

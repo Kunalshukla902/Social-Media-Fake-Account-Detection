@@ -3,7 +3,7 @@ import streamlit as st
 from streamlit_option_menu import option_menu
 
 
-import home, Insights, your, about, ann_predictor_csv, decision_tree_predictor_csv, random_forest_predictor_csv
+import home, Insights, about, ann_predictor_csv, decision_tree_predictor_csv, random_forest_predictor_csv
 st.set_page_config(
         page_title="Fake Social Media Detection",
         

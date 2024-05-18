@@ -13,7 +13,7 @@ import numpy as np
 import joblib
 
 # Load the pre-trained Random Forest model
-Random_forest_model = joblib.load('Random_forest_model.pkl')
+Random_forest_model = joblib.load('model_weights/Random_forest_model.pkl')
 
 # Function to preprocess user input
 def preprocess_input(user_input):

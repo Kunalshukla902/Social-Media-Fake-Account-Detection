@@ -17,7 +17,7 @@ import pandas as pd # data processing, CSV file I/O (e.g. pd.read_csv)
 #from google.colab import drive
 #drive.mount('/content/drive')
 
-df_train = pd.read_csv('C:/Users/kshuk/3D Objects/major project/major code/main folder/project code/insta_train.csv')
+df_train = pd.read_csv('datasets/insta_train.csv')
 
 df_train.head()
 
@@ -133,14 +133,14 @@ plt.show()
 import joblib
 
 # Define the filename for saving the trained model
-model_filename = 'decision_tree_model.pkl'
+model_filename = 'model_weights/decision_tree_model.pkl'
 
 # Save the trained model to the specified filename using joblib
 joblib.dump(model, model_filename)
 
 print("Model saved successfully at:", model_filename)
 
-df_test = pd.read_csv('C:/Users/kshuk/3D Objects/major project/major code/main folder/project code/insta_test.csv')
+df_test = pd.read_csv('datasets/insta_test.csv')
 
 df_test.head()
 
@@ -164,7 +164,7 @@ import joblib
 import pandas as pd
 
 # Load the trained model from file
-model_filename = 'C:/Users/kshuk/3D Objects/major project/major code/main folder/project code/decision_tree_model.pkl'
+model_filename = 'model_weights/decision_tree_model.pkl'
 loaded_model = joblib.load(model_filename)
 
 # Define the input features based on user_data keys
